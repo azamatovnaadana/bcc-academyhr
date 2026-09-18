@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Трудоустройство — BCC HR WORK</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f6f5;
+            color: #252525;
+        }
+
+        /* =====================
+        HEADER
+        ===================== */
+        header {
+            height: 78px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 55px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 700;
+            color: #26352b;
+        }
+
+        .back {
+            text-decoration: none;
+            color: #299b18;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 16px;
+            border: 1px solid #d9ead5;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .back:hover {
+            background: #edf8eb;
+        }
+
+        /* =====================
+        HERO
+        ===================== */
+        .hero {
+            background: linear-gradient(90deg, #21b500, #18a900);
+            color: white;
+            padding: 45px 55px;
+        }
+
+        .hero h1 {
+            margin: 0 0 10px;
+            font-size: 34px;
+        }
+
+        .hero p {
+            margin: 0;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        /* =====================
+        CONTENT
+        ===================== */
+        .container {
+            max-width: 1050px;
+            margin: 40px auto;
+            padding: 0 25px;
+        }
+
+        /* =====================
+        STEP / SECTION
+        ===================== */
+        .step {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .step-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: #eaf7e7;
+            color: #249c13;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        .step-title h2 {
+            margin: 0;
+            font-size: 22px;
+            color: #303b32;
+        }
+
+        .step p {
+            line-height: 1.65;
+            color: #555;
+            font-size: 15px;
+        }
+
+        /* =====================
+        IMAGE BLOCK (Новый блок для вашего фото)
+        ===================== */
+        .image-container {
+            text-align: center;
+            margin-top: 25px;
+            padding: 20px;
+            background: #f9faf9;
+            border-radius: 12px;
+            border: 2px dashed #cde8c7;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+        }
+
+        .image-caption {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* =====================
+        WARNING / INFO
+        ===================== */
+        .warning {
+            margin-top: 20px;
+            padding: 18px 20px;
+            background: #fff8e7;
+            border-left: 4px solid #e7ad32;
+            border-radius: 8px;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        /* =====================
+        FOOTER
+        ===================== */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #999;
+            font-size: 13px;
+        }
+
+        /* =====================
+        MOBILE
+        ===================== */
+        @media (max-width: 800px) {
+            header { padding: 0 20px; }
+            .hero { padding: 35px 25px; }
+            .hero h1 { font-size: 28px; }
+            .step { padding: 23px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+    <div class="logo">
+        BCC HR WORK
+    </div>
+
+    <a href="hr.html" class="back">
+        ← Назад на главную
+    </a>
+
+</header>
+
+
+    <section class="hero">
+        <h1>Трудоустройство</h1>
+        <p>Инструкция по сбору документов и оформлению на работу</p>
+    </section>
+
+    <main class="container">
+
+        <!-- ЭТАП 1: Поздравление и условие -->
+        <section class="step">
+            <div class="step-title">
+                <span class="step-number">1</span>
+                <h2>Оформление стажера</h2>
+            </div>
+            <p>
+                Если стажер успешно прошел аттестацию, следующим этапом является 
+                <strong>официальное трудоустройство</strong>.
+            </p>
+            <p>
+                Для завершения процесса  необходимо собрать полный пакет документов и приехать в офис 
+                для оформления приказа.
+            </p>
+        </section>
+
+        <!-- ЭТАП 2: Список документов -->
+        <section class="step">
+            <div class="step-title">
+                <span class="step-number">2</span>
+                <h2>Необходимые документы для приема</h2>
+            </div>
+            <p>
+                Стажеру необходимо внимательно ознакомьтесь со списком документов ниже. 
+                 Если какого-либо документа не хватает, 
+                оформление может быть <strong>перенесено</strong>.
+            </p>
+
+            <!-- БЛОК С ФОТОТОМИ -->
+            <div class="documents">
+
+<!--
+ЗАМЕНИТЕ "лист"
+НА НАЗВАНИЕ ВАШЕГО ФАЙЛА
+-->
+
+<a
+href="https://bcckz0-my.sharepoint.com/:w:/g/personal/reimzhan_izizov_bcc_kz/IQBO34HrmHcuQLOsfwKoY9FYATa5nIu-4c_6OV19LSeq4aU?e=wAqr1F"
+target="_blank"
+class="document"
+>
+
+<span class="document-icon">
+📄
+</span>
+
+Список документов для приема на работу
+
+</a>
+
+</div>
+
+                <div class="image-caption">
+                    Нажмите на ссылку для просмотра
+                </div>
+            </div>
+
+            <div class="warning">
+                <strong>Обратите внимание:</strong> все документы должны быть актуальными.
+            </div>
+        </section>
+
+       
+    </main>
+
+    <footer>
+        BCC HR WORK © 2026
+    </footer>
+
+</body>
+</html>

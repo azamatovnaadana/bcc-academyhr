@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Анкета и согласие — BCC HR WORK</title>
+
+
+<style>
+
+/* =========================
+ОСНОВНЫЕ НАСТРОЙКИ
+========================= */
+
+* {
+box-sizing: border-box;
+}
+
+
+body {
+margin: 0;
+
+font-family: Arial, Helvetica, sans-serif;
+
+background: #f5f6f5;
+
+color: #252525;
+}
+
+
+/* =========================
+ШАПКА
+========================= */
+
+header {
+
+height: 78px;
+
+background: white;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+padding: 0 55px;
+
+border-bottom: 1px solid #e5e5e5;
+}
+
+
+.logo {
+
+font-size: 25px;
+
+font-weight: 700;
+
+color: #26352b;
+}
+
+
+.back {
+
+text-decoration: none;
+
+color: #299b18;
+
+font-size: 14px;
+
+font-weight: 600;
+
+padding: 10px 17px;
+
+border: 1px solid #d9ead5;
+
+border-radius: 8px;
+
+transition: 0.2s;
+}
+
+
+.back:hover {
+
+background: #edf8eb;
+
+transform: translateY(-1px);
+}
+
+
+/* =========================
+ЗЕЛЁНЫЙ ЗАГОЛОВОК
+========================= */
+
+.hero {
+
+background: linear-gradient(
+90deg,
+#21b500,
+#18a900
+);
+
+color: white;
+
+padding: 45px 55px;
+}
+
+
+.hero h1 {
+
+margin: 0 0 10px;
+
+font-size: 33px;
+
+font-weight: 700;
+}
+
+
+.hero p {
+
+margin: 0;
+
+font-size: 15px;
+
+opacity: 0.9;
+}
+
+
+/* =========================
+ОСНОВНОЙ КОНТЕЙНЕР
+========================= */
+
+.container {
+
+max-width: 1000px;
+
+margin: 40px auto;
+
+padding: 0 25px;
+}
+
+
+/* =========================
+КАРТОЧКА
+========================= */
+
+.block {
+
+background: white;
+
+border-radius: 16px;
+
+padding: 30px;
+
+margin-bottom: 25px;
+
+box-shadow:
+0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+.block h2 {
+
+margin: 0 0 20px;
+
+font-size: 22px;
+
+color: #303b32;
+}
+
+
+.block p {
+
+font-size: 15px;
+
+line-height: 1.7;
+
+color: #555;
+}
+
+
+/* =========================
+ВАЖНОЕ СООБЩЕНИЕ
+========================= */
+
+.important {
+
+background: #fff8e7;
+
+border-left: 4px solid #e7ad32;
+
+padding: 16px 18px;
+
+border-radius: 8px;
+
+margin: 20px 0;
+
+font-size: 15px;
+
+line-height: 1.5;
+
+color: #4d432d;
+}
+
+
+/* =========================
+ПРАВИЛА
+========================= */
+
+.rule {
+
+display: flex;
+
+align-items: flex-start;
+
+gap: 15px;
+
+margin: 20px 0;
+}
+
+
+.rule > span {
+
+min-width: 31px;
+
+height: 31px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+background: #eaf7e7;
+
+color: #249c13;
+
+border-radius: 50%;
+
+font-weight: bold;
+
+font-size: 14px;
+}
+
+
+.rule p {
+
+margin: 3px 0 0;
+
+color: #4f4f4f;
+}
+
+
+/* =========================
+ОСОБЫЕ ПУНКТЫ
+========================= */
+
+.special-rule {
+
+margin-top: 25px;
+
+padding: 22px;
+
+background: #f8faf8;
+
+border-radius: 12px;
+
+border: 1px solid #e5e9e5;
+}
+
+
+.special-rule h3 {
+
+margin: 0 0 12px;
+
+color: #299b18;
+
+font-size: 17px;
+}
+
+
+.special-rule p {
+
+margin: 10px 0;
+}
+
+
+/* =========================
+ПУНКТ 16
+========================= */
+
+.important-rule {
+
+background: #fffaf0;
+
+border: 1px solid #f0d58c;
+
+border-left: 4px solid #e7ad32;
+}
+
+
+/* =========================
+ПРИМЕР
+========================= */
+
+.example {
+
+background: white;
+
+border-left: 3px solid #299b18;
+
+padding: 13px 16px;
+
+margin: 15px 0;
+
+border-radius: 6px;
+
+color: #444;
+
+font-size: 14px;
+}
+
+
+/* =========================
+СПИСОК
+========================= */
+
+.special-rule ul {
+
+margin-top: 10px;
+
+padding-left: 22px;
+
+line-height: 1.9;
+
+color: #555;
+}
+
+
+/* =========================
+СОГЛАСИЕ
+========================= */
+
+.consent-note {
+
+background: #edf8eb;
+
+border: 1px solid #cde8c7;
+
+border-radius: 10px;
+
+padding: 17px 18px;
+
+margin-bottom: 20px;
+
+color: #276b20;
+
+font-size: 14px;
+
+line-height: 1.5;
+}
+
+
+/* =========================
+ДОКУМЕНТ
+========================= */
+
+.document-section {
+
+text-align: center;
+
+padding: 35px 25px;
+}
+
+
+.document-icon {
+
+font-size: 42px;
+
+margin-bottom: 12px;
+}
+
+
+.document-section h2 {
+
+margin-bottom: 10px;
+}
+
+
+.document-section p {
+
+margin-bottom: 22px;
+}
+
+
+.document-button {
+
+display: inline-flex;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 10px;
+
+padding: 14px 23px;
+
+background: #21b500;
+
+color: white;
+
+border-radius: 9px;
+
+text-decoration: none;
+
+font-weight: 600;
+
+font-size: 15px;
+
+transition: 0.2s;
+}
+
+
+.document-button:hover {
+
+background: #189900;
+
+transform: translateY(-2px);
+
+box-shadow:
+0 5px 15px rgba(30, 170, 0, 0.2);
+}
+
+
+/* =========================
+НИЖНЯЯ НАВИГАЦИЯ
+========================= */
+
+.bottom-navigation {
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+margin-top: 10px;
+}
+
+
+.bottom-navigation a {
+
+text-decoration: none;
+
+color: #299b18;
+
+font-size: 14px;
+
+font-weight: 600;
+
+padding: 10px 15px;
+
+border-radius: 8px;
+
+transition: 0.2s;
+}
+
+
+.bottom-navigation a:hover {
+
+background: #edf8eb;
+}
+
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+
+text-align: center;
+
+padding: 35px;
+
+color: #999;
+
+font-size: 13px;
+}
+
+
+/* =========================
+АДАПТАЦИЯ ПОД ТЕЛЕФОН
+========================= */
+
+@media (max-width: 700px) {
+
+header {
+
+height: auto;
+
+padding: 18px 20px;
+
+gap: 15px;
+}
+
+
+.logo {
+
+font-size: 21px;
+}
+
+
+.back {
+
+font-size: 13px;
+
+padding: 8px 12px;
+}
+
+
+.hero {
+
+padding: 35px 25px;
+}
+
+
+.hero h1 {
+
+font-size: 27px;
+}
+
+
+.container {
+
+margin: 25px auto;
+
+padding: 0 15px;
+}
+
+
+.block {
+
+padding: 22px;
+
+border-radius: 13px;
+}
+
+
+.rule {
+
+gap: 11px;
+}
+
+
+.special-rule {
+
+padding: 18px;
+}
+
+
+.bottom-navigation {
+
+flex-direction: column;
+
+gap: 10px;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+ШАПКА
+========================= -->
+
+<header>
+
+<div class="logo">
+BCC HR WORK
+</div>
+
+
+<a
+href="sobesedovanie.html"
+class="back"
+>
+← Назад к собеседованию
+</a>
+
+</header>
+
+
+
+<!-- =========================
+ЗАГОЛОВОК
+========================= -->
+
+<section class="hero">
+
+<h1>
+Анкета и согласие
+</h1>
+
+<p>
+Правила заполнения документов кандидатом
+</p>
+
+</section>
+
+
+
+<!-- =========================
+ОСНОВНОЙ КОНТЕНТ
+========================= -->
+
+<main class="container">
+
+
+<!-- =========================
+ПРАВИЛА АНКЕТЫ
+========================= -->
+
+<section class="block">
+
+<h2>
+Правила заполнения анкеты
+</h2>
+
+
+<div class="important">
+
+❗️ <strong>Просим внимательно заполнить анкету.</strong>
+
+</div>
+
+
+<!-- ПРАВИЛО 1 -->
+
+<div class="rule">
+
+<span>
+1
+</span>
+
+<p>
+Анкету необходимо заполнять ПЕЧАТНЫМИ буквами полностью,
+не оставляя пустых пунктов.
+</p>
+
+</div>
+
+
+<!-- ПРАВИЛО 2 -->
+
+<div class="rule">
+
+<span>
+2
+</span>
+
+<p>
+Если на какой-либо вопрос ответ
+<strong>«Нет»</strong>, обязательно указывайте
+<strong>«Нет»</strong>.
+Пустые строки оставлять нельзя.
+</p>
+
+</div>
+
+
+<!-- ПРАВИЛО 3 -->
+
+<div class="rule">
+
+<span>
+3
+</span>
+
+<p>
+Если отчество отсутствует,
+в соответствующем пункте укажите
+<strong>«Нет»</strong>.
+</p>
+
+</div>
+
+
+<!-- ПРАВИЛО 4 -->
+
+<div class="rule">
+
+<span>
+4
+</span>
+
+<p>
+Все личные данные — ФИО, дата рождения,
+место рождения, гражданство и т.д. —
+необходимо указывать строго так,
+как указано в удостоверении личности.
+</p>
+
+</div>
+
+
+
+<!-- ПУНКТ 11 -->
+
+<div class="special-rule">
+
+<h3>
+Пункт 11
+</h3>
+
+<p>
+Необходимо указать контактный номер (например, родственника или
+близкого человека).
+</p>
+
+
+<div class="example">
+
+<strong>Пример:</strong><br>
+
++7 777 777 77 77 — Подруга Алиса
+
+</div>
+
+</div>
+
+
+
+<!-- ПУНКТ 13 -->
+
+<div class="special-rule">
+
+<h3>
+Пункт 13
+</h3>
+
+<p>
+<strong>Обязателен к заполнению для мужского пола.</strong>
+</p>
+
+</div>
+
+
+
+<!-- ПУНКТ 16 -->
+
+<div class="special-rule important-rule">
+
+<h3>
+❗️ Пункт 16 — самый важный пункт
+</h3>
+
+
+<p>
+Необходимо полностью заполнить таблицу
+с данными близких родственников.
+</p>
+
+
+<p>
+Указывайте <strong>полное ФИО</strong>.
+</p>
+
+
+<div class="example">
+
+<strong>Пример:</strong><br>
+
+Иванов Иван Иванович
+
+</div>
+
+
+<p>
+Заполняйте данные:
+</p>
+
+
+<ul>
+
+<li>
+мамы;
+</li>
+
+<li>
+папы;
+</li>
+
+<li>
+брата;
+</li>
+
+<li>
+сестры.
+</li>
+
+</ul>
+
+
+<p>
+Указываются только близкие родственники.
+</p>
+
+
+<p>
+Если родителей нет, напишите:
+<strong>«Нет родителей»</strong>.
+</p>
+
+
+<p>
+Если есть другие близкие родственники
+(например, тетя или дядя), можно указать
+их вместо родителей.
+</p>
+
+</div>
+
+
+
+<!-- ПУНКТЫ 17-20 -->
+
+<div class="special-rule">
+
+<h3>
+Пункты 17–20
+</h3>
+
+
+<p>
+Если ответ <strong>«Нет»</strong>,
+необходимо обязательно написать
+<strong>«Нет»</strong>.
+</p>
+
+
+<p>
+Пустыми данные пункты оставлять нельзя.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+ПРАВИЛА СОГЛАСИЯ
+========================= -->
+
+<section class="block">
+
+<h2>
+Правила заполнения согласия
+</h2>
+
+
+<div class="consent-note">
+
+❗️ <strong>Обратите внимание:</strong>
+шапку согласия не заполняем.
+
+</div>
+
+
+<!-- ПРАВИЛО 1 -->
+
+<div class="rule">
+
+<span>
+1
+</span>
+
+<p>
+В шапке согласия ничего не заполняется.
+</p>
+
+</div>
+
+
+<!-- ПРАВИЛО 2 -->
+
+<div class="rule">
+
+<span>
+2
+</span>
+
+<p>
+Заполняется только
+<strong>фамилия и имя</strong>,
+отчество — при наличии отчества.
+</p>
+
+</div>
+
+
+<!-- ПРАВИЛО 3 -->
+
+<div class="rule">
+
+<span>
+3
+</span>
+
+<p>
+На обратной стороне необходимо указать
+<strong>дату и поставить подпись</strong>.
+</p>
+
+</div>
+
+
+<!-- ПРАВИЛО 4 -->
+
+<div class="rule">
+
+<span>
+4
+</span>
+
+<p>
+Дата и подпись проставляются
+<strong>с двух сторон </strong>.
+</p>
+
+</div>
+
+
+<!-- ПРАВИЛО 5 -->
+
+<div class="rule">
+
+<span>
+5
+</span>
+
+<p>
+Заполнение производится
+<strong>на русском и казахском языках</strong>.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+ДОКУМЕНТ
+========================= -->
+
+<section class="block document-section">
+
+<div class="document-icon">
+📄
+</div>
+
+
+<h2>
+Анкета и согласие
+</h2>
+
+
+<p>
+Используйте актуальную форму документа
+для заполнения.
+</p>
+
+
+<a
+href="https://bcckz0-my.sharepoint.com/:w:/g/personal/reimzhan_izizov_bcc_kz/IQDJ_bfLb1oKTpfixMzgxSGyAYTgeRVl0JB3KubIgBHmGK0?e=xw6Kpq"
+target="_blank"
+class="document-button"
+>
+
+📄 Открыть анкету и согласие
+
+</a>
+
+</section>
+
+
+
+<!-- =========================
+НАВИГАЦИЯ
+========================= -->
+
+<div class="bottom-navigation">
+
+<a href="sobesedovanie.html">
+← Вернуться к собеседованию
+</a>
+
+
+<a href="hr.html">
+На главную
+</a>
+
+</div>
+
+
+</main>
+
+
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer>
+
+BCC HR WORK © 2026
+
+</footer>
+
+
+</body>
+
+</html>
+

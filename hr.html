@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BCC HR WORK</title>
+
+<style>
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: #f5f6f5;
+color: #222;
+}
+
+/* =========================
+ШАПКА
+========================= */
+
+header {
+height: 82px;
+background: white;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 0 55px;
+
+border-bottom: 1px solid #e5e5e5;
+}
+
+.logo {
+font-size: 26px;
+font-weight: 700;
+color: #26352b;
+}
+
+/* ПОИСК */
+
+.search-wrapper {
+position: relative;
+}
+
+.search {
+width: 280px;
+height: 42px;
+
+padding: 0 42px 0 16px;
+
+border: 1px solid #dcdcdc;
+border-radius: 10px;
+
+font-size: 14px;
+
+outline: none;
+
+transition: 0.2s;
+}
+
+.search:focus {
+border-color: #20ad00;
+box-shadow: 0 0 0 3px rgba(32, 173, 0, 0.10);
+}
+
+.search-icon {
+position: absolute;
+
+right: 14px;
+top: 50%;
+
+transform: translateY(-50%);
+
+color: #777;
+font-size: 18px;
+
+pointer-events: none;
+}
+
+
+/* =========================
+ЗЕЛЁНЫЙ БАННЕР
+========================= */
+
+.hero {
+background: linear-gradient(90deg, #21b500, #18a900);
+
+color: white;
+
+padding: 43px 55px;
+}
+
+.hero h1 {
+margin: 0 0 10px;
+
+font-size: 32px;
+font-weight: 700;
+}
+
+.hero p {
+margin: 0;
+
+font-size: 15px;
+opacity: 0.9;
+}
+
+
+/* =========================
+КАРТОЧКИ
+========================= */
+
+main {
+max-width: 1150px;
+
+margin: 40px auto;
+
+padding: 0 25px;
+}
+
+.sections {
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 24px;
+}
+
+.card {
+background: white;
+
+border-radius: 17px;
+
+padding: 27px 28px;
+
+min-height: 245px;
+
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+transition: 0.2s ease;
+}
+
+.card:hover {
+transform: translateY(-3px);
+
+box-shadow: 0 9px 25px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =========================
+ЗАГОЛОВОК КАРТОЧКИ
+========================= */
+
+.card-title {
+display: flex;
+
+align-items: center;
+
+gap: 10px;
+
+margin-bottom: 22px;
+}
+
+.icon {
+font-size: 21px;
+}
+
+.card-title h2 {
+margin: 0;
+
+font-size: 19px;
+
+color: #3c7c32;
+}
+
+
+/* =========================
+ССЫЛКИ
+========================= */
+
+.links {
+display: flex;
+
+flex-direction: column;
+
+gap: 7px;
+}
+
+.links a {
+display: block;
+
+padding: 9px 10px;
+
+border-radius: 7px;
+
+text-decoration: none;
+
+color: #333;
+
+font-size: 15px;
+
+transition: 0.2s;
+}
+
+.links a:hover {
+background: #edf8eb;
+
+color: #159900;
+
+padding-left: 15px;
+}
+
+
+/* =========================
+ЕСЛИ НИЧЕГО НЕ НАЙДЕНО
+========================= */
+
+.no-results {
+display: none;
+
+text-align: center;
+
+padding: 40px 20px;
+
+color: #777;
+
+font-size: 15px;
+}
+
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+text-align: center;
+
+padding: 35px;
+
+color: #999;
+
+font-size: 13px;
+}
+
+
+/* =========================
+ТЕЛЕФОН
+========================= */
+
+@media (max-width: 850px) {
+
+header {
+padding: 0 20px;
+}
+
+.search {
+width: 220px;
+}
+
+.hero {
+padding: 35px 25px;
+}
+
+.sections {
+grid-template-columns: 1fr;
+}
+}
+
+
+@media (max-width: 600px) {
+
+header {
+height: auto;
+
+padding: 18px 20px;
+
+gap: 15px;
+
+flex-direction: column;
+
+align-items: stretch;
+}
+
+.logo {
+text-align: center;
+}
+
+.search {
+width: 100%;
+}
+
+.hero h1 {
+font-size: 26px;
+}
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+ШАПКА
+========================= -->
+
+<header>
+
+<div class="logo">
+BCC HR WORK
+</div>
+
+<div class="search-wrapper">
+
+<input
+type="search"
+id="searchInput"
+class="search"
+placeholder="Поиск инструкции..."
+autocomplete="off"
+>
+
+<span class="search-icon">⌕</span>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================
+ЗЕЛЁНЫЙ БЛОК
+========================= -->
+
+<section class="hero">
+
+<h1>
+Инструкции по рабочим процессам
+</h1>
+
+<p>
+База знаний HR-специалиста ДПРК
+</p>
+
+</section>
+
+
+
+<!-- =========================
+КАРТОЧКИ
+========================= -->
+
+<main>
+
+<div class="sections" id="sections">
+
+
+<!-- КАНДИДАТЫ -->
+
+<div class="card">
+
+<div class="card-title">
+
+<span class="icon">👥</span>
+
+<h2>КАНДИДАТЫ</h2>
+
+</div>
+
+
+<div class="links">
+
+<a
+href="sobesedovanie.html"
+target="_blank"
+>
+Собеседование
+</a>
+
+
+<a
+href="obuchenie.html"
+target="_blank"
+>
+Обучение
+</a>
+
+
+<a
+href="trudoustroystvo.html"
+target="_blank"
+>
+Трудоустройство
+</a>
+
+
+<a
+href="dostupy.html"
+target="_blank"
+>
+Доступы сотрудникам
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ЯНДЕКС -->
+
+<div class="card">
+
+<div class="card-title">
+
+<span class="icon">🚕</span>
+
+<h2>ЯНДЕКС</h2>
+
+</div>
+
+
+<div class="links">
+
+<a
+href="monitoring.html"
+target="_blank"
+>
+Мониторинг
+</a>
+
+
+<a
+href="nachislenie.html"
+target="_blank"
+>
+Начисление
+</a>
+
+
+<a
+href="korrektirovki.html"
+target="_blank"
+>
+Корректировки
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ЗАЯВКА -->
+
+<div class="card">
+
+<div class="card-title">
+
+<span class="icon">📄</span>
+
+<h2>ЗАЯВКА</h2>
+
+</div>
+
+
+<div class="links">
+
+<a
+href="vse-zayavki.html"
+target="_blank"
+>
+Все заявки
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- НИЧЕГО НЕ НАЙДЕНО -->
+
+<div
+class="no-results"
+id="noResults"
+>
+По вашему запросу ничего не найдено.
+</div>
+
+</main>
+
+
+
+<footer>
+
+BCC HR WORK © 2026
+
+</footer>
+
+
+
+<!-- =========================
+ПОИСК
+========================= -->
+
+<script>
+
+const searchInput =
+document.getElementById("searchInput");
+
+const cards =
+document.querySelectorAll(".card");
+
+const noResults =
+document.getElementById("noResults");
+
+
+searchInput.addEventListener("input", function () {
+
+const query =
+searchInput.value
+.trim()
+.toLowerCase();
+
+
+let found = false;
+
+
+cards.forEach(function (card) {
+
+const links =
+card.querySelectorAll(".links a");
+
+
+let cardHasResult = false;
+
+
+links.forEach(function (link) {
+
+const text =
+link.textContent
+.toLowerCase();
+
+
+if (
+text.includes(query)
+||
+card.querySelector("h2")
+.textContent
+.toLowerCase()
+.includes(query)
+) {
+
+link.style.display = "block";
+
+cardHasResult = true;
+
+found = true;
+
+} else {
+
+link.style.display = "none";
+
+}
+
+});
+
+
+if (cardHasResult) {
+
+card.style.display = "block";
+
+} else {
+
+card.style.display = "none";
+
+}
+
+});
+
+
+if (found || query === "") {
+
+noResults.style.display = "none";
+
+} else {
+
+noResults.style.display = "block";
+
+}
+
+
+/* Если поиск пустой —
+вернуть все ссылки */
+
+if (query === "") {
+
+cards.forEach(function (card) {
+
+card.style.display = "block";
+
+const links =
+card.querySelectorAll(".links a");
+
+links.forEach(function (link) {
+
+link.style.display = "block";
+
+});
+
+});
+
+}
+
+});
+
+</script>
+
+
+</body>
+</html>

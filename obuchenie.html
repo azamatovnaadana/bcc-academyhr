@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Обучение — BCC HR WORK</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7f6;
+            color: #1f2933;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #299b18;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #299b18;
+            letter-spacing: 1px;
+        }
+
+        .back {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .back:hover {
+            color: #299b18;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #299b18, #1e7a13);
+            color: white;
+            padding: 55px 50px;
+        }
+
+        .hero h1 {
+            margin: 0 0 12px;
+            font-size: 38px;
+        }
+
+        .hero p {
+            margin: 0;
+            font-size: 17px;
+            opacity: 0.92;
+            max-width: 850px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            background: white;
+            border-radius: 18px;
+            padding: 28px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e8ecea;
+            line-height: 1.7;
+        }
+
+        .city-title {
+            margin: 45px 0 25px;
+            padding: 20px 25px;
+            background: #299b18;
+            color: white;
+            border-radius: 15px;
+        }
+
+        .city-title h2 {
+            margin: 0 0 5px;
+            font-size: 28px;
+        }
+
+        .city-title p {
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .step {
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+            margin-bottom: 22px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e8ecea;
+        }
+
+        .step-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .number {
+            min-width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #299b18;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .step h2 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .step h3 {
+            color: #299b18;
+            margin-top: 25px;
+        }
+
+        .step p {
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .step ul,
+        .step ol {
+            line-height: 1.85;
+        }
+
+        .important {
+            background: #fff8df;
+            border-left: 5px solid #e6b800;
+            padding: 18px 20px;
+            border-radius: 10px;
+            margin: 18px 0;
+            line-height: 1.6;
+        }
+
+        .important strong {
+            color: #299b18;
+        }
+
+        .warning {
+            background: #fff0f0;
+            border-left: 5px solid #d9534f;
+            padding: 18px 20px;
+            border-radius: 10px;
+            margin: 18px 0;
+            line-height: 1.6;
+        }
+
+        .warning strong {
+            color: #b52b27;
+        }
+
+        .path {
+            background: #f0f3f2;
+            padding: 16px 18px;
+            border-radius: 10px;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .subsection {
+            background: #f8faf9;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .subsection h3 {
+            margin-top: 0;
+            color: #299b18;
+        }
+
+        .document-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .document {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 18px;
+            background: #f7faf8;
+            border: 1px solid #dfe8e3;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #1f2933;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .document:hover {
+            background: #edf7f1;
+            border-color: #299b18;
+            transform: translateX(3px);
+        }
+
+        .document-icon {
+            font-size: 22px;
+        }
+
+        .formula {
+            background: #eef8f2;
+            border: 1px solid #cfe7d8;
+            padding: 18px;
+            border-radius: 12px;
+            font-family: Consolas, monospace;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+
+        .example {
+            background: #f7f7f7;
+            border-left: 4px solid #299b18;
+            padding: 16px 18px;
+            border-radius: 8px;
+            margin: 15px 0;
+            line-height: 1.7;
+        }
+
+        .mail {
+            background: #eef5ff;
+            border-left: 5px solid #3778c2;
+            padding: 18px 20px;
+            border-radius: 10px;
+            margin: 18px 0;
+            line-height: 1.7;
+        }
+
+        .mail strong {
+            color: #285d99;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .city-card {
+            background: white;
+            border: 1px solid #dfe8e3;
+            border-radius: 15px;
+            padding: 22px;
+        }
+
+        .city-card h3 {
+            color: #299b18;
+            margin-top: 0;
+        }
+
+        .bottom-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin: 45px 0;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 14px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            background: white;
+            border: 1px solid #dfe5e1;
+            color: #333;
+        }
+
+        .nav-button.green {
+            background: #299b18;
+            color: white;
+            border-color: #299b18;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 13px;
+        }
+
+        @media (max-width: 750px) {
+            header { padding: 18px 20px; }
+            .hero { padding: 40px 20px; }
+            .hero h1 { font-size: 30px; }
+            .step { padding: 22px; }
+            .comparison { grid-template-columns: 1fr; }
+            .bottom-nav { flex-direction: column; }
+        }
+    </style>
+</head></head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        BCC HR WORK
+    </div>
+
+    <a href="hr.html" class="back">
+        ← Назад на главную
+    </a>
+
+</header>
+
+
+
+<section class="hero">
+
+    <h1>Обучение</h1>
+
+    <p>
+        Порядок оформления кандидатов во время десятидневного обучения.
+        Ниже представлены отдельные инструкции для кандидатов,
+        проходящих обучение в Алматы и Шымкенте.
+    </p>
+
+</section>
+
+
+
+<div class="container">
+
+
+    <!-- ОБЩАЯ ИНФОРМАЦИЯ -->
+
+    <div class="intro">
+
+        <h2>Общий порядок</h2>
+
+        <p>
+            Раздел «Обучение» содержит порядок оформления документов
+            кандидатов во время десятидневного обучения.
+        </p>
+
+        <p>
+            В зависимости от города порядок работы с документами
+            отличается. Для <strong>Алматы</strong> и
+            <strong>Шымкента</strong> используются разные шаблоны
+            ГПХ и АВР.
+        </p>
+
+        <div class="important">
+
+            <strong>Важно:</strong>
+
+            Перед началом оформления необходимо убедиться,
+            что кандидат прошёл проверку службы безопасности.
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================== -->
+    <!-- АЛМАТЫ -->
+    <!-- ========================== -->
+
+
+    
+
+
+    <!-- АЛМАТЫ — СБ -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">🔍</div>
+
+            <h2>Проверка службы безопасности</h2>
+
+        </div>
+
+        <p>
+            До начала обучения необходимо направить кандидата
+            на проверку службы безопасности.
+        </p>
+
+        <div class="important">
+
+            <strong>К обучению допускаются только кандидаты,
+            прошедшие СБ.</strong>
+
+        </div>
+
+        <p>
+            Заявка создаётся по просьбе рекрутера через
+            <strong>ServiceDesk</strong>.
+        </p>
+
+        <h3>Путь в ServiceDesk:</h3>
+
+        <div class="path">
+
+            Каталог услуг → Заработная плата и персонал →
+            Подбор персонала (Филиалы)
+
+        </div>
+
+        <div class="example">
+
+            <strong>Пример заявки:</strong><br>
+
+            RP6148347
+
+        </div>
+
+    </div>
+
+    <div class="city-title">
+
+        <h2>📍 Алматы</h2>
+
+        <p>
+            Порядок оформления кандидатов на обучение в Алматы
+        </p>
+
+    </div>
+
+    <!-- АЛМАТЫ — BCC PAY -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">1</div>
+
+            <h2>Начало обучения</h2>
+
+        </div>
+
+        <p>
+            После успешного прохождения СБ кандидат приступает
+            к десятидневному обучению.
+        </p>
+
+        <div class="subsection">
+
+            <h3>В первые два дня обучения кандидат открывает
+                карту нашего банка <strong>BCC Pay</strong>.</h3>
+
+          
+        </div>
+
+        <div class="important">
+
+            <strong>Важно:</strong>
+
+            без открытой карты BCC Pay невозможно стандартное
+            оформление ГПХ, поскольку банковский счёт кандидата
+            указывается в договоре.
+
+        </div>
+
+    </div>
+
+
+
+    <!-- АЛМАТЫ — ГПХ -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">2</div>
+
+            <h2>Оформление ГПХ</h2>
+
+        </div>
+
+        <p>
+            На третий день обучения оформляется
+            <strong>ГПХ</strong>.
+        </p>
+
+        <div class="subsection">
+
+            <h3>Шаблон ГПХ Алматы</h3>
+
+            <p>
+                Для оформления используется отдельный шаблон ГПХ.
+                Изменяемые места выделены жёлтым цветом.
+            </p>
+
+            <div class="document-list">
+
+                <a href="https://bcckz0-my.sharepoint.com/:w:/g/personal/reimzhan_izizov_bcc_kz/IQD1WqNKbNugQqM3guahL5q0AS6zRCKlRJRFhjE3IMKE61c?e=ptDTU0"
+                   target="_blank"
+                   class="document">
+
+                    <span class="document-icon">📄</span>
+
+                    Открыть шаблон ГПХ — Алматы
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <h3>Что необходимо изменить в ГПХ</h3>
+
+        <ol>
+
+            <li>
+                Присвоить номер договора.
+            </li>
+
+            <li>
+                Указать дату составления договора.
+            </li>
+
+            <li>
+                Заполнить данные кандидата:
+                <ul>
+                    <li>ФИО;</li>
+                    <li>номер удостоверения личности;</li>
+                    <li>дату выдачи удостоверения личности.</li>
+                </ul>
+            </li>
+
+            <li>
+                В пункте <strong>1.3</strong> указать период обучения.
+            </li>
+
+   
+            <li>
+                В пунктах <strong>2.1 и 2.2</strong> указать сумму
+                выплаты кандидату.
+            </li>
+
+        </ol>
+
+
+        <div class="subsection">
+
+            <h3>11-я страница ГПХ</h3>
+
+            <p>
+                На последней странице необходимо заполнить:
+            </p>
+
+            <ul>
+
+                <li>ФИО стажёра;</li>
+
+                <li>дату рождения;</li>
+
+                <li>ИИН;</li>
+
+                <li>номер документа;</li>
+
+                <li>дату выдачи документа;</li>
+
+                <li>номер банковского счёта карты BCC Pay;</li>
+
+                <li>юридический адрес проживания кандидата.</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- АЛМАТЫ — РАСЧЁТ -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">3</div>
+
+            <h2>Расчёт суммы по ГПХ</h2>
+
+        </div>
+
+        <p>
+            Сумма выплаты рассчитывается от
+            <strong>85 000 ₸ </strong>.
+        </p>
+
+        <p>
+            Если обучение проходит в течение двух разных месяцев,
+            расчёт производится отдельно за каждый месяц.
+        </p>
+
+        <div class="formula">
+
+            85 000 ₸ ÷ количество рабочих дней месяца
+            × количество фактически пройденных дней
+
+        </div>
+
+        <div class="example">
+
+            <strong>Пример:</strong><br><br>
+
+            6 дней обучения в августе:
+
+            <br><br>
+
+            85 000 ₸ ÷ рабочие дни августа × 6
+
+            <br><br>
+
+            4 дня обучения в сентябре:
+
+            <br><br>
+
+            85 000 ₸ ÷ рабочие дни сентября × 4
+
+            <br><br>
+
+            После этого обе суммы складываются.
+
+        </div>
+
+    </div>
+
+
+
+    <!-- АЛМАТЫ — ПОДПИСИ -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">4</div>
+
+            <h2>Подписание ГПХ</h2>
+
+        </div>
+
+        <ol>
+
+            <li>
+                Распечатать ГПХ.
+            </li>
+
+            <li>
+                Передать документ кандидату для проверки.
+            </li>
+
+            <li>
+                Кандидат проверяет свои данные.
+            </li>
+
+            <li>
+                Кандидат подписывает ГПХ
+                <strong>синей ручкой</strong>.
+            </li>
+
+            <li>
+                Передать документ эксперту.
+            </li>
+
+            <li>
+                Эксперт ставит подпись со своей стороны.
+            </li>
+
+            <li>
+                Передать документ старшему эксперту.
+            </li>
+
+            <li>
+                Старший эксперт ставит подпись и печать.
+            </li>
+
+        </ol>
+
+    </div>
+
+
+
+    <!-- АЛМАТЫ — СОХРАНЕНИЕ -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">5</div>
+
+            <h2>Сканирование и сохранение ГПХ</h2>
+
+        </div>
+
+        <p>
+            После подписания и проставления печати ГПХ необходимо
+            отсканировать и сохранить в локальном диске.
+        </p>
+
+        <h3>Путь:</h3>
+
+        <div class="path">
+
+            Public_HQ (P:) → ДРБ → УОЦ → ДПРК 505 →
+            Обучение ДПРК → ГПХ
+
+        </div>
+
+        <p>
+            В папке ГПХ создаётся новая папка с датой обучения.
+        </p>
+
+        <p>
+            В неё необходимо сохранить:
+        </p>
+
+        <ul>
+
+            <li>Word-версию ГПХ;</li>
+
+            <li>скан подписанного ГПХ.</li>
+
+        </ul>
+
+    </div>
+
+
+
+    <!-- АЛМАТЫ — ОТПРАВКА -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">6</div>
+
+            <h2>Отправка ГПХ</h2>
+
+        </div>
+
+        <div class="mail">
+
+            <strong>Кому:</strong>
+            Ким Татьяна
+
+            <br><br>
+
+            <strong>В копию:</strong>
+             рекрутеров и эксперта ДПРК
+
+        </div>
+
+        <p>
+            После получения документов рекрутеры заводят данные ГПХ.
+        </p>
+
+        <p>
+            После заведения ГПХ кандидату предоставляется
+            учётная запись на период обучения, после чего
+            кандидат может приступить к практике.
+        </p>
+
+    </div>
+
+
+
+    <!-- АЛМАТЫ — ОТКАЗ -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">7</div>
+
+            <h2>Если невозможно оформить ГПХ</h2>
+
+        </div>
+
+        <p>
+            Если у кандидата не открывается карта BCC Pay
+            или по другой причине невозможно оформить ГПХ,
+            необходимо запросить заявление о добровольном
+            отказе от ГПХ.
+        </p>
+
+        <div class="document-list">
+
+            <a href="https://bcckz0-my.sharepoint.com/:w:/g/personal/reimzhan_izizov_bcc_kz/IQAYhjl2ZlJWTrJQvJRQuL9zAf6XIbm5O2cOxQaAX_xjMBE?e=8pJ6mX"
+               target="_blank"
+               class="document">
+
+                <span class="document-icon">📄</span>
+
+                Открыть заявление об отказе от ГПХ
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- АЛМАТЫ — АВР -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">8</div>
+
+            <h2>Оформление АВР</h2>
+
+        </div>
+
+        <p>
+            Начиная с восьмого дня обучения оформляется
+            <strong>Акт выполненных работ (АВР)</strong>.
+        </p>
+
+        <p>
+            Сумма зависит от фактического количества дней,
+            которые кандидат проходил обучение.
+        </p>
+
+        <div class="example">
+
+            Если кандидат прошёл 9 дней —
+            начисление производится за 9 дней.
+
+            <br><br>
+
+            Если кандидат прошёл все 10 дней —
+            начисление производится за 10 дней.
+
+        </div>
+
+
+        <div class="subsection">
+
+            <h3>Шаблон АВР — Алматы</h3>
+
+            <div class="document-list">
+
+                <a href="https://bcckz0-my.sharepoint.com/:w:/g/personal/reimzhan_izizov_bcc_kz/IQBpcnuzW-RrSZbT_to7XT5kAa5gT8LOzJaRSm3NOzcyDC4?e=OGv12Z"
+                   target="_blank"
+                   class="document">
+
+                    <span class="document-icon">📄</span>
+
+                    Открыть шаблон АВР — Алматы
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <h3>Что меняем в АВР</h3>
+
+        <ol>
+
+            <li>Дата составления АВР.</li>
+
+            <li>Данные стажёра.</li>
+
+     
+            <li>Номер и дату договора ГПХ.</li>
+
+        
+
+            <li>Сумма выплаты.</li>
+
+            <li>Номер банковского счёта.</li>
+
+
+
+        </ol>
+
+    </div>
+
+
+
+    <!-- АЛМАТЫ — ПОДПИСАНИЕ АВР -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">9</div>
+
+            <h2>Подписание АВР</h2>
+
+        </div>
+
+        <ol>
+
+            <li>
+                Распечатать АВР.
+            </li>
+
+            <li>
+                Передать кандидату.
+            </li>
+
+            <li>
+                Кандидат проверяет свои данные.
+            </li>
+
+            <li>
+                Кандидат ставит подпись и пишет свои инициалы.
+            </li>
+
+            <li>
+                Передать АВР эксперту.
+            </li>
+
+            <li>
+                Эксперт ставит подпись.
+            </li>
+
+            <li>
+                Передать документ старшему эксперту.
+            </li>
+
+            <li>
+                Старший эксперт ставит подпись и печать.
+            </li>
+
+        </ol>
+
+    </div>
+
+
+
+    <!-- АЛМАТЫ — ОТПРАВКА АВР -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">10</div>
+
+            <h2>Сканирование и отправка АВР</h2>
+
+        </div>
+
+        <h3>Путь на локальном диске:</h3>
+
+        <div class="path">
+
+            Public_HQ (P:) → ДРБ → УОЦ → ДПРК 505 →
+            Обучение ДПРК → АВР
+
+        </div>
+
+        <p>
+            В папке АВР создаётся отдельная папка с датой обучения.
+        </p>
+
+        <p>
+            В неё сохраняются:
+        </p>
+
+        <ul>
+
+            <li>Word-версия АВР;</li>
+
+            <li>скан подписанного АВР.</li>
+
+        </ul>
+
+
+        <div class="mail">
+
+            <strong>Скан АВР отправляется:</strong>
+
+            <br><br>
+
+            Ким Татьяне
+
+            <br>
+
+            Койшыбаева Сандугаш
+
+        </div>
+
+
+        <p>
+            После этого оригиналы АВР отправляются
+            <strong>через канцелярию Койшыбаева Сандугаш</strong>.
+        </p>
+
+    </div>
+
+
+
+    <!-- АЛМАТЫ — ПРОШИВКА -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">11</div>
+
+            <h2>Прошивка ГПХ</h2>
+
+        </div>
+
+        <p>
+            После проставления всех необходимых подписей и печатей
+            ГПХ необходимо прошить.
+        </p>
+
+        <ol>
+
+            <li>
+                Сделать отверстия в документе.
+            </li>
+
+            <li>
+  <a href="https://bcckz0-my.sharepoint.com/:w:/g/personal/reimzhan_izizov_bcc_kz/IQDZE4WRbyRfT4HlZ1x91FttARJpETXGm8OSVySHoZkLbW0?e=OTuxPH"
+                   target="_blank"
+                   class="document">
+
+                    <span class="document-icon">📄</span>
+
+                    Прошить документ ниткой.
+
+
+                </a>
+
+            </li>
+
+            <li>
+                Приклеить бумажную отметку о прошивке.
+            </li>
+
+            <li>
+                Передать прошитый документ старшему эксперту.
+            </li>
+
+            <li>
+                Старший эксперт ставит подпись и печать
+                на прошивке.
+            </li>
+
+        </ol>
+
+    </div>
+
+
+
+    <!-- ========================== -->
+    <!-- ШЫМКЕНТ -->
+    <!-- ========================== -->
+
+
+    <div class="city-title">
+
+        <h2>📍 Шымкент</h2>
+
+        <p>
+            Отдельный порядок оформления документов
+            для кандидатов из города Шымкент
+        </p>
+
+    </div>
+
+
+
+    <!-- ШЫМКЕНТ — ОБЩЕЕ -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">1</div>
+
+            <h2>Допуск к обучению</h2>
+
+        </div>
+
+        <p>
+            Кандидат допускается к обучению после успешного
+            прохождения проверки службы безопасности.
+        </p>
+
+        <div class="important">
+
+            <strong>Важно:</strong>
+
+            для Шымкента используются отдельные шаблоны
+            ГПХ и АВР.
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ШЫМКЕНТ — ГПХ -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">2</div>
+
+            <h2>Оформление ГПХ — Шымкент</h2>
+
+        </div>
+
+     
+        <div class="subsection">
+
+            <h3>Шаблон ГПХ — Шымкент</h3>
+
+            <p>
+                Сначала HR заполняет Word-версию ГПХ
+                по установленному шаблону.
+            </p>
+
+            <div class="document-list">
+
+                <a href="https://bcckz0-my.sharepoint.com/:w:/g/personal/reimzhan_izizov_bcc_kz/IQCJEhw3UsLnRorU-69aCaHgAZ3GXr4o-DF5gbTQY_T6UvQ?e=40Aj7D"
+                   target="_blank"
+                   class="document">
+
+                    <span class="document-icon">📄</span>
+
+                    Открыть шаблон ГПХ — Шымкент
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <h3>После подготовки ГПХ</h3>
+
+        <ol>
+
+            <li>
+                Подготовить Word-версию ГПХ.
+            </li>
+
+            <li>
+                Отправить готовый документ
+                <strong>супервайзеру или ментору города Шымкент</strong>.
+            </li>
+
+            <li>
+                Супервайзер/ментор самостоятельно
+                распечатывает документ.
+            </li>
+
+            <li>
+                Документ подписывается со стороны кандидата
+                и ответственных лиц.
+            </li>
+
+            <li>
+                После подписания супервайзер/ментор
+                отправляет скан документа обратно.
+            </li>
+
+        </ol>
+
+    </div>
+
+
+
+    <!-- ШЫМКЕНТ — ОТПРАВКА ГПХ -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">3</div>
+
+            <h2>Получение и отправка ГПХ</h2>
+
+        </div>
+
+        <p>
+            После того как супервайзер или ментор Шымкента
+            отправил подписанный скан ГПХ, HR получает документ.
+        </p>
+
+        <div class="mail">
+
+            <strong>Далее HR отправляет ГПХ по электронной почте,</strong>
+            используется тот же порядок передачи информации,
+            что и для оформления ГПХ в Алматы.
+
+        </div>
+
+        
+
+    </div>
+
+
+
+    <!-- ШЫМКЕНТ — АВР -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">4</div>
+
+            <h2>Оформление АВР — Шымкент</h2>
+
+        </div>
+
+     
+
+        <div class="subsection">
+
+            <h3>Шаблон АВР — Шымкент</h3>
+
+            <div class="document-list">
+
+                <a href="https://bcckz0-my.sharepoint.com/:w:/g/personal/reimzhan_izizov_bcc_kz/IQCniET6285WR5MgntAaubzZASJU4AW02iWBIepDF-VNc6Y?e=oozZTC"
+                   target="_blank"
+                   class="document">
+
+                    <span class="document-icon">📄</span>
+
+                    Открыть шаблон АВР
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <p>
+            АВР оформляется по той же логике,
+            что и в Алматы, но используется
+            <strong>шаблон Шымкента</strong>.
+        </p>
+
+        <p>
+            В Word-версии заполняются необходимые данные
+            кандидата и сумма за фактически пройденные
+            дни обучения.
+        </p>
+<ol>
+
+            <li>
+                Подготовить Word-версию АВР.
+            </li>
+
+            <li>
+                Отправить Word-версию
+                супервайзеру или ментору города Шымкент.
+            </li>
+
+            <li>
+                Супервайзер/ментор распечатывает АВР.
+            </li>
+
+            <li>
+                Документ подписывается.
+            </li>
+
+            <li>
+                Подписанный АВР сканируется.
+            </li>
+
+            <li>
+                Скан АВР отправляется обратно HR.
+            </li>
+
+        </ol>
+<p>
+            После получения подписанного скана АВР
+            HR отправляет документ по электронной почте.
+ 
+   
+        </p>
+
+        <div class="mail">
+
+            <strong>Порядок отправки:</strong>
+
+            <br><br>
+
+            Используется тот же порядок отправки,
+            что и при работе с АВР в Алматы.
+
+        </div>
+
+
+
+    </div>
+
+
+
+    
+
+
+   
+
+
+    <!-- СРАВНЕНИЕ -->
+
+    <div class="step">
+
+        <div class="step-title">
+
+            <div class="number">✓</div>
+
+            <h2>Главное отличие Алматы и Шымкента</h2>
+
+        </div>
+
+
+        <div class="comparison">
+
+            <div class="city-card">
+
+                <h3>📍 Алматы</h3>
+
+                <ul>
+
+                    <li>
+                        HR самостоятельно готовит ГПХ.
+                    </li>
+
+                    <li>
+                        Документы печатаются в Алматы.
+                    </li>
+
+                    <li>
+                        Кандидат подписывает ГПХ.
+                    </li>
+
+                    <li>
+                        Эксперт и старший эксперт
+                        ставят подписи и печать.
+                    </li>
+
+                    <li>
+                        HR самостоятельно сканирует документы и отправляет по электронной почте.
+                    </li>
+
+                    <li>
+                        ГПХ и АВР сохраняются
+                        на локальном диске.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="city-card">
+
+                <h3>📍 Шымкент</h3>
+
+                <ul>
+
+                    
+
+                    <li>
+                        HR готовит Word-версию.
+                    </li>
+
+                    <li>
+                        Word отправляется супервайзеру
+                        или ментору Шымкента.
+                    </li>
+
+                    <li>
+                        Супервайзер/ментор печатает документы.
+                    </li>
+
+                    <li>
+                        После подписания они отправляют
+                        сканы HR.
+                    </li>
+
+                    <li>
+                        Далее HR отправляет документы
+                        по электронной почте.
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    
+
+
+    <div class="bottom-nav">
+
+        <a href="sobesedovanie.html"
+           target="_blank"
+           class="nav-button">
+
+            ← Собеседование
+
+        </a>
+
+        <a href="hr.html"
+           class="nav-button green">
+
+            На главную
+
+        </a>
+
+    </div>
+
+
+</div>
+
+
+
+<footer>
+
+    BCC HR WORK · Внутренняя HR-инструкция
+
+</footer>
+
+
+</body>
+</html>
+

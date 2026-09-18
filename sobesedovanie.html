@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Собеседование — BCC HR WORK</title>
+
+<style>
+
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: #f5f6f5;
+color: #252525;
+}
+
+/* =====================
+HEADER
+===================== */
+
+header {
+height: 78px;
+background: white;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 0 55px;
+
+border-bottom: 1px solid #e5e5e5;
+}
+
+.logo {
+font-size: 25px;
+font-weight: 700;
+color: #26352b;
+}
+
+.back {
+text-decoration: none;
+color: #299b18;
+
+font-size: 14px;
+font-weight: 600;
+
+padding: 10px 16px;
+
+border: 1px solid #d9ead5;
+border-radius: 8px;
+
+transition: 0.2s;
+}
+
+.back:hover {
+background: #edf8eb;
+}
+
+
+/* =====================
+HERO
+===================== */
+
+.hero {
+background: linear-gradient(
+90deg,
+#21b500,
+#18a900
+);
+
+color: white;
+
+padding: 45px 55px;
+}
+
+.hero h1 {
+margin: 0 0 10px;
+
+font-size: 34px;
+}
+
+.hero p {
+margin: 0;
+
+font-size: 15px;
+
+opacity: 0.9;
+}
+
+
+/* =====================
+CONTENT
+===================== */
+
+.container {
+max-width: 1050px;
+
+margin: 40px auto;
+
+padding: 0 25px;
+}
+
+
+/* =====================
+STEP
+===================== */
+
+.step {
+background: white;
+
+border-radius: 16px;
+
+padding: 30px;
+
+margin-bottom: 25px;
+
+box-shadow:
+0 5px 20px rgba(0,0,0,0.06);
+}
+
+.step-number {
+display: inline-flex;
+
+align-items: center;
+justify-content: center;
+
+width: 38px;
+height: 38px;
+
+background: #eaf7e7;
+
+color: #249c13;
+
+border-radius: 50%;
+
+font-weight: 700;
+
+margin-right: 10px;
+}
+
+.step-title {
+display: flex;
+
+align-items: center;
+
+margin-bottom: 20px;
+}
+
+.step-title h2 {
+margin: 0;
+
+font-size: 22px;
+
+color: #303b32;
+}
+
+.step p {
+line-height: 1.65;
+
+color: #555;
+
+font-size: 15px;
+}
+
+
+/* =====================
+DIRECTIONS
+===================== */
+
+.directions {
+display: grid;
+
+grid-template-columns:
+repeat(3, 1fr);
+
+gap: 15px;
+
+margin-top: 25px;
+}
+
+.direction {
+border: 1px solid #e5e9e5;
+
+border-radius: 12px;
+
+padding: 20px;
+
+transition: 0.2s;
+}
+
+.direction:hover {
+border-color: #48b33a;
+
+transform: translateY(-2px);
+
+box-shadow:
+0 5px 15px rgba(0,0,0,0.05);
+}
+
+.direction-code {
+color: #249c13;
+
+font-size: 14px;
+
+font-weight: 700;
+
+margin-bottom: 8px;
+}
+
+.direction-name {
+font-size: 15px;
+
+line-height: 1.4;
+}
+
+
+/* =====================
+DOCUMENTS
+===================== */
+
+.documents {
+display: flex;
+
+flex-direction: column;
+
+gap: 10px;
+
+margin-top: 20px;
+}
+
+.document {
+display: flex;
+
+align-items: center;
+
+gap: 12px;
+
+padding: 13px 15px;
+
+background: #f8faf8;
+
+border-radius: 9px;
+
+text-decoration: none;
+
+color: #333;
+
+transition: 0.2s;
+}
+
+.document:hover {
+background: #edf8eb;
+
+color: #199408;
+}
+
+.document-icon {
+font-size: 20px;
+}
+
+
+/* =====================
+WARNING
+===================== */
+
+.warning {
+margin-top: 20px;
+
+padding: 18px 20px;
+
+background: #fff8e7;
+
+border-left: 4px solid #e7ad32;
+
+border-radius: 8px;
+
+line-height: 1.5;
+
+font-size: 14px;
+}
+
+
+/* =====================
+CHECKLIST
+===================== */
+
+.checklist {
+margin-top: 20px;
+}
+
+.check {
+display: flex;
+
+align-items: center;
+
+gap: 10px;
+
+margin-bottom: 12px;
+
+font-size: 15px;
+}
+
+.check span {
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+width: 22px;
+height: 22px;
+
+border-radius: 5px;
+
+background: #eaf7e7;
+
+color: #249c13;
+
+font-size: 13px;
+
+font-weight: bold;
+}
+
+
+/* =====================
+FINAL
+===================== */
+
+.success {
+background: #edf8eb;
+
+border: 1px solid #cde8c7;
+
+border-radius: 14px;
+
+padding: 25px;
+
+margin-top: 25px;
+}
+
+.success h3 {
+margin-top: 0;
+
+color: #208d11;
+}
+
+.success p {
+margin-bottom: 0;
+}
+
+
+/* =====================
+FOOTER
+===================== */
+
+footer {
+text-align: center;
+
+padding: 30px;
+
+color: #999;
+
+font-size: 13px;
+}
+
+
+/* =====================
+MOBILE
+===================== */
+
+@media (max-width: 800px) {
+
+header {
+padding: 0 20px;
+}
+
+.hero {
+padding: 35px 25px;
+}
+
+.hero h1 {
+font-size: 28px;
+}
+
+.directions {
+grid-template-columns: 1fr;
+}
+
+.step {
+padding: 23px;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+BCC HR WORK
+</div>
+
+<a
+href="hr.html"
+class="back"
+>
+← На главную
+</a>
+
+</header>
+
+
+
+<section class="hero">
+
+<h1>
+Собеседование
+</h1>
+
+<p>
+Порядок проведения собеседования и оформления кандидата
+</p>
+
+</section>
+
+
+
+<main class="container">
+
+
+<!-- =====================
+ЭТАП 1
+===================== -->
+
+<section class="step">
+
+<div class="step-title">
+
+<span class="step-number">
+1
+</span>
+
+<h2>
+Собеседование по направлениям
+</h2>
+
+</div>
+
+
+<p>
+Собеседование проводится супервайзером
+соответствующего направления.
+</p>
+
+<p>
+На данном этапе кандидат знакомится
+с условиями работы, обязанностями и
+особенностями выбранного направления.
+</p>
+
+
+<div class="directions">
+
+
+<div class="direction">
+
+<div class="direction-code">
+НВВ
+</div>
+
+<div class="direction-name">
+Направление входящих вызовов
+</div>
+
+</div>
+
+
+<div class="direction">
+
+<div class="direction-code">
+НЧиМ
+</div>
+
+<div class="direction-name">
+Направление чатов и мессенджеров
+</div>
+
+</div>
+
+
+<div class="direction">
+
+<div class="direction-code">
+НОВКиИ
+</div>
+
+<div class="direction-name">
+Направление по обслуживанию
+VIP-клиентов и инвестиционных продуктов
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="documents">
+
+<!--
+ЗАМЕНИТЕ "лист"
+НА НАЗВАНИЕ ВАШЕГО ФАЙЛА
+-->
+
+<a
+href="https://bcckz0-my.sharepoint.com/:w:/g/personal/reimzhan_izizov_bcc_kz/IQBO34HrmHcuQLOsfwKoY9FYATa5nIu-4c_6OV19LSeq4aU?e=wAqr1F"
+target="_blank"
+class="document"
+>
+
+<span class="document-icon">
+📄
+</span>
+
+Лист ознакомления
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================
+ЭТАП 2
+===================== -->
+
+<section class="step">
+
+<div class="step-title">
+
+<span class="step-number">
+2
+</span>
+
+<h2>
+Тестирование
+</h2>
+
+</div>
+
+
+<p>
+Кандидат проходит два теста по коммуникации
+через платформу <a href="https://bcc-academy.life/login" target="_blank">
+«Стажёр»
+</a>.
+</p>
+
+
+<p>
+По результатам тестирования принимается
+решение о дальнейшем участии кандидата
+в процессе подбора.
+</p>
+
+
+<div class="warning">
+
+<strong>Важно:</strong>
+
+кандидаты, не прошедшие тестирование,
+не допускаются к обучению.
+
+</div>
+
+</section>
+
+
+
+<!-- =====================
+ЭТАП 3
+===================== -->
+
+<section class="step">
+
+<div class="step-title">
+
+<span class="step-number">
+3
+</span>
+
+<h2>
+Сбор документов
+</h2>
+
+</div>
+
+
+<p>
+После успешного прохождения этапов
+собеседования и тестирования HR собирает
+необходимые документы кандидата.
+</p>
+
+
+<div class="documents">
+
+
+<a
+href="anketa.html"
+target="_blank"
+class="document"
+>
+<span class="document-icon">
+📄
+</span>
+
+1. Анкета и согласие
+</a>
+
+
+
+<a
+href="https://bcckz0-my.sharepoint.com/:w:/g/personal/reimzhan_izizov_bcc_kz/IQBjPjJGI1aCRaT2hnfiqI_LAcWiX0M3U-nN9dMIzFz1AVc?e=yUfXzv"
+target="_blank"
+class="document"
+>
+
+<span class="document-icon">
+📄
+</span>
+
+2. Обязательство
+
+</a>
+
+
+<a
+href="https://bcckz0-my.sharepoint.com/:w:/g/personal/reimzhan_izizov_bcc_kz/IQBO34HrmHcuQLOsfwKoY9FYATa5nIu-4c_6OV19LSeq4aU?e=YSTsCd"
+target="_blank"
+class="document"
+>
+
+<span class="document-icon">
+📄
+</span>
+
+3. Лист ознакомления
+
+</a>
+
+<div class="document">
+<span class="document-icon">
+🪪
+</span>
+4. Удостоверение личности
+</div>
+
+
+<div class="document">
+<span class="document-icon">
+📄
+</span>​‌
+5. Резюме​‌
+</div>
+
+<p>
+Удостоверение личности и резюме запрашиваются
+у кандидата в формате PDF на корпоративную
+почту.
+</p>
+
+</section>
+
+
+
+<!-- =====================
+ЭТАП 4
+===================== -->
+
+<section class="step">
+
+<div class="step-title">
+
+<span class="step-number">
+4
+</span>
+
+<h2>
+Сканирование и загрузка документов
+</h2>
+
+</div>
+
+
+<p>
+После получения документов HR сканирует
+необходимые документы и загружает их
+в Ресурс.
+</p>
+
+
+<div class="checklist">
+
+<div class="check">
+<span>✓</span>
+Отсканировать документы кандидата
+</div>
+
+<div class="check">
+<span>✓</span>
+Открыть файл с именем кандидата в Ресурс
+</div>
+
+<div class="check">
+<span>✓</span>
+Загрузить все 5 документов
+</div>
+
+</div>
+
+
+<div class="documents">
+
+<a
+href="https://bcckz0-my.sharepoint.com/shared?id=%2Fpersonal%2Freimzhan%5Fizizov%5Fbcc%5Fkz%2FDocuments%2F%D0%9A%D0%B0%D0%BD%D0%B4%D0%B8%D0%B4%D0%B0%D1%82%D1%8B%20505&listurl=%2Fpersonal%2Freimzhan%5Fizizov%5Fbcc%5Fkz%2FDocuments&ct=1773306585207&or=Teams%2DHL&LOF=1"
+target="_blank"
+class="document"
+>
+
+<span class="document-icon">
+📁
+</span>
+
+Ресурс с документами
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================
+ЭТАП 5
+===================== -->
+
+<section class="step">
+
+<div class="step-title">
+
+<span class="step-number">
+5
+</span>
+
+<h2>
+Возврат документов кандидату
+</h2>
+
+</div>
+
+
+<p>
+После завершения оформления HR возвращает
+кандидату бумажные документы, за исключением
+обязательства.
+</p>
+
+
+<div class="checklist">
+
+<div class="check">
+<span>✓</span>
+Анкета и согласие
+</div>
+
+<div class="check">
+<span>✓</span>
+Лист ознакомления
+</div>
+
+</div>
+
+
+<div class="warning">
+
+<strong>
+Обязательство остаётся у работодателя.
+</strong>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================
+ЭТАП 6
+===================== -->
+
+<section class="step">
+
+<div class="step-title">
+
+<span class="step-number">
+6
+</span>
+
+<h2>
+Регистрация кандидата на обучение
+</h2>
+
+</div>
+
+
+<p>
+После выполнения всех необходимых действий
+кандидат считается зарегистрированным
+на обучение.
+</p>
+
+
+<div class="success">
+
+<h3>
+✓ Кандидат зарегистрирован на обучение
+</h3>
+
+<p>
+Все необходимые документы собраны,
+отсканированы и загружены в Ресурс.
+</p>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+BCC HR WORK © 2026
+
+</footer>
+
+
+</body>
+
+</html>
+
